@@ -1,0 +1,17 @@
+body {
+    background-color: teal;
+}
+
+h1 {
+    font-size: large;
+    color: white;
+}
+
+ul {
+    font-weight: bold;
+    color: white;
+}
+
+ul li {
+    font-size: xx-large;
+}
