@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    font-size: large;
+    font-size: xx-large;
     color: white;
 }
 
@@ -13,5 +13,5 @@ ul {
 }
 
 ul li {
-    font-size: xx-large;
+    font-size: large;
 }
