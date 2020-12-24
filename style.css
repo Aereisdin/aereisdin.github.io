@@ -12,7 +12,7 @@ body {
 }
 .japantext {
     background-color: #222;
-    opacity: 0.6;
+    opacity: 0.8;
     border: 4px 4px 4px 4px;
     border: #444;
     border-style: inset;
@@ -71,30 +71,42 @@ body {
     bottom: auto;
 }
 #jp7 {
-
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    right: auto;
+    bottom: auto;
 }
 #jp8 {
-
+    position: absolute;
+    top: 33%;
+    left: auto;
+    right: 15%;
+    bottom: auto;
 }
 #jp9 {
+    position: absolute;
     top: 10%;
     left: auto;
     right: 15%;
     bottom: auto;
 }
 #jp10 {
+    position: absolute;
     top: 33%;
     left 17%;
     right: auto;
     bottom: auto;
 }
 #jp11 {
+    position: absolute;
     top: 40%;
     left: 20%;
     right: auto;
     bottom: auto;
 }
 #jp12 {
+    position: absolute;
     top: 60%;
     left: 33%;
     right: auto;
