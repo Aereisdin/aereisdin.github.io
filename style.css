@@ -70,6 +70,36 @@ body {
     right: auto;
     bottom: auto;
 }
+#jp7 {
+
+}
+#jp8 {
+
+}
+#jp9 {
+    top: 10%;
+    left: auto;
+    right: 15%;
+    bottom: auto;
+}
+#jp10 {
+    top: 33%;
+    left 17%;
+    right: auto;
+    bottom: auto;
+}
+#jp11 {
+    top: 40%;
+    left: 20%;
+    right: auto;
+    bottom: auto;
+}
+#jp12 {
+    top: 60%;
+    left: 33%;
+    right: auto;
+    bottom: auto;
+}
 .side-left {
     text-align: justify;
     height: fit-content;
