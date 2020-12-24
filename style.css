@@ -112,11 +112,19 @@ body {
     right: auto;
     bottom: auto;
 }
+#portfoliomain {
+    position: absolute;
+    top: 95%;
+}
 .side-left {
     text-align: left;
     height: fit-content;
     padding-top: 5%;
     padding-left: 5%;
+}
+#Kiel {
+    height: 200px;
+    width: 225px;
 }
 .aboutme {
     overflow: visible;
@@ -124,10 +132,13 @@ body {
     padding: 1%;
 }
 
-@media only screen and (max-width: 580px){
+@media only screen and (max-width: 600px){
     .aboutme {
       height: fit-content;
       overflow: unset;
       margin-top: 10px;
+    }
+    .side-left {
+        text-align: center;
     }
   }
