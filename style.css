@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body {
+    background-color: #222;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+}
 
 .japan {
     max-height: fit-content;
@@ -55,5 +62,22 @@
     right: 10%;
     top: auto;
     left: auto;
-
+}
+#jp6 {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    right: auto;
+    bottom: auto;
+}
+.side-left {
+    text-align: justify;
+    height: fit-content;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+.aboutme {
+    overflow: visible;
+    height: 2px;
+    padding: 1%;
 }
