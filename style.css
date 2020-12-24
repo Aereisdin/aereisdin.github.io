@@ -3,3 +3,57 @@
     max-height: fit-content;
     width: 100%;
 }
+.japantext {
+    background-color: #222;
+    opacity: 0.6;
+    border: 4px 4px 4px 4px;
+    border: #444;
+    border-style: inset;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    margin: 2px 2px 2px 2px;
+}
+.containers {
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+}
+.item {
+    
+}
+#jp1 {
+    position: absolute;
+    top: 15%;
+    left: 42%;
+    bottom: auto;
+    right: auto;
+}
+#jp2 {
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    bottom: auto;
+    left: auto;
+}
+#jp3 {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    bottom: auto;
+    right: auto;
+}
+#jp4 {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    bottom: auto;
+    left: auto;
+}
+#jp5 {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    top: auto;
+    left: auto;
+
+}
