@@ -8,7 +8,7 @@
 }
 
 .contactbody {
-    background-image: url(./JapanPhotos/japan15.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./JapanPhotos/japan15.jpg);
     background-repeat: no-repeat;
     background-size: cover, cover;
     background-color: rgb(43, 0, 0);
@@ -16,7 +16,30 @@
     font-size: 16pt;
     line-height: 1.5;
 }
+.projectstart {
+    position: absolute;
+    top: 15%;
+}
+.projectsbody {
+    background-image: url(./JapanPhotos/japan25b.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #444;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16pt;
+    line-height: 1.5;
+    height: 100%;
+}
+.projectbox {
+    background-color: white;
+    border: #222 1px solid;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
 
+}
 .forms {
     background-color: white;
     opacity: 0.8;
@@ -31,30 +54,23 @@
     padding: 10px 10px 10px 10px;
 }
 
-/* The hero image */
-.hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./JapanPhotos/japan1.jpg");
-  
-    /* Set a specific height */
-    height: 50%;
-  
-    /* Position and center the image to scale nicely on all screens */
+.bgimage {
+    width:100%;
+    height:300px;
+    background-color: #222;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
   }
-  
-  /* Place text in the middle of the image */
-  .hero-text {
+  .bgimage-text {
     text-align: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-  } */
+  }
   
 .japan {
     max-height: fit-content;
