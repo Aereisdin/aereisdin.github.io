@@ -192,13 +192,33 @@
     padding: 1%;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 400px){
     .aboutme {
       height: fit-content;
       overflow: unset;
       margin-top: 10px;
+      margin-left: 1px;
     }
     .side-left {
         text-align: center;
     }
+    .japan {
+        height: 375px;
+    }
   }
+  @media only screen and (max-width: 950px){
+    .aboutme {
+      height: fit-content;
+      overflow: unset;
+      margin-top: 10px;
+      margin-left: 1px;
+    }
+    .side-left {
+        text-align: center;
+    }
+    .japan {
+        height: 475px;
+    }
+  }
+ 
+ 
