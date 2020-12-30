@@ -192,7 +192,7 @@
     padding: 1%;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 200px){
     .aboutme {
       height: fit-content;
       overflow: unset;
@@ -203,7 +203,7 @@
         text-align: center;
     }
     .japan {
-        height: 375px;
+        height: auto;
     }
   }
   @media only screen and (max-width: 950px){
