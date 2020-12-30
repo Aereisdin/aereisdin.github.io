@@ -175,21 +175,10 @@
     right: auto;
     bottom: auto;
 }
-
-.side-left {
-    text-align: left;
-    height: fit-content;
-    padding-top: 5%;
-    padding-left: 5%;
-}
-#Kiel {
-    height: 200px;
-    width: 225px;
-}
-.aboutme {
-    overflow: visible;
-    height: 2px;
-    padding: 1%;
+.myPhotos {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media only screen and (max-width: 200px){
