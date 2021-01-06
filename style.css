@@ -196,7 +196,7 @@
         height: 200px;
     }
   }
-  @media only screen and (min-width: 450) and (max-width: 950px){
+  @media only screen and (min-width: 200px) and (max-width: 450px){
     .aboutme {
       height: fit-content;
       overflow: unset;
@@ -207,20 +207,7 @@
         text-align: center;
     }
     .japan {
-        height: 475px;
+        height: auto;
     }
   }
-  @media only screen and (max-width: 2000px){
-    .aboutme {
-        height: fit-content;
-        overflow: unset;
-        margin-top: 10px;
-        margin-left: 1px;
-      }
-      .side-left {
-          text-align: center;
-      }
-      .japan {
-          height: 750px;
-      }
-    }
+  
