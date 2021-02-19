@@ -1,0 +1,228 @@
+@font-face {
+    font-family: InknutAntiqua;
+    src: url('./InknutAntiqua-Regular.woff2') format('woff2')
+}
+@font-face {
+    font-family: MarcellusSC;
+    src: url('./MarcellusSC-Regular.woff2') format('woff2')
+}
+@font-face {
+    font-family: PermanentMarker;
+    src: url('./PermanentMarker-Regular.woff2') format('woff2')
+}
+@font-face {
+    font-family: SpectralSC;
+    src: url('./SpectralSC-Regular.woff2') format('woff2')
+}
+
+body, html {
+    height: 100%;
+}
+.index{
+    background-color: rgb(73, 73, 76);
+}
+.title {
+    background-color: rgba(255, 255, 255);
+    font-family: MarcellusSC;
+    font-size: 2.5em;
+    color: #222;
+    text-align: center;
+    z-index: 10;
+}
+nav {
+    z-index: 10;
+}
+.menu-text {
+    font-family: MarcellusSC;
+    font-size: 2.5em;
+
+}
+.menu {
+    background-color: rgba(255, 255, 255, 0.716);
+    color: #222;
+    z-index: 1;
+}
+.title-bar {
+    background-color: rgba(169, 159, 159, 0.77);
+}
+.menu a {
+    color: #444;
+}
+.menu a:hover {
+    background-color: rgba(105, 105, 230, 0.77);
+    color: rgb(51, 196, 196);
+}
+.nav-buttons {
+    font-family: SpectralSC;
+    font-size: 1.75em;
+}
+.hero {
+    background-image: url(../images/heroimg.jpg);
+    height: 1250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -35%;
+    z-index: -1;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: PermanentMarker;
+    font-size: 7em;
+    color: white;
+}
+.projectDisplay {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    width: 85%;
+    border-radius: 5px;
+    border: white 1px solid;
+    color: white;
+    font-size: 1.75em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: left;
+    position: absolute;
+    top: 25%;
+    left: 7%;
+    z-index: 10;
+}
+.projectList {
+    height: auto;
+}
+.projectText {
+    height: auto;
+}
+.projectDisplay2 {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    border: white 1px solid;
+    color: white;
+    font-size: 1em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: left;
+   
+}
+.projectPhotos {
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: auto;
+    padding-bottom: 15px;
+}
+.intro {
+    margin-top: -350px;
+    background-color: rgba(72, 72, 72, 0);
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.photo {
+    height: auto;
+    width: auto;
+    margin-bottom: 5px;
+}
+.self {
+    height: auto;
+    width: auto;
+    border-radius: 5px;
+    border:white 1px solid;
+    z-index: 1;
+}
+.introText {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    min-height: 300px;
+    border-radius: 5px;
+    border: white 1px solid;
+    color: white;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+.Kiel{
+    font-family: MarcellusSC;
+    font-size: 2em;
+}
+.tabs {
+    background-color: rgb(26, 25, 28);
+}
+.accordion {
+    background-color: rgb(26, 25, 28);
+}
+.tabs a {
+    font-size: 1.75em;
+    font-family: MarcellusSC;
+    font-weight: 700;
+}
+.accordion a {
+    font-size: 1.75em;
+    font-family: MarcellusSC;
+    font-weight: 700; 
+}
+.tabs a:hover {
+    background-color: rgba(105, 105, 230, 0.77);
+    color: tomato;
+}
+.accordion a:hover {
+    background-color: rgba(105, 105, 230, 0.77);
+    color: tomato;
+}
+.tabs-content {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    min-height: 500px;
+    color: white;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: left;
+}
+.accordion-content {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    min-height: 500px;
+    color: white;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: left;
+}
+.tabsBox {
+    margin-bottom: 15px;
+}
+.langs {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    min-height: 300px;
+    border-radius: 5px;
+    border: white 1px solid;
+    color: white;
+    font-size: 2em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    padding: 20px;
+    text-align: left;
+}
+footer {
+    background-color: rgb(26, 25, 28);
+    height: auto;
+    min-height: 100px;
+    border-radius: 5px;
+    border: white 1px solid;
+    color: white;
+    font-size: 1.5em;
+    font-family: MarcellusSC;
+    text-align: left;
+    padding: 10px;
+    margin-top: 15px;
+}
