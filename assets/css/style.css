@@ -58,12 +58,11 @@ nav {
 }
 .hero {
     background-image: url(../images/heroimg.jpg);
-    height: 1250px;
+    height: 850px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    top: -35%;
     z-index: -1;
 }
 .hero-text {
@@ -75,6 +74,43 @@ nav {
     font-family: PermanentMarker;
     font-size: 7em;
     color: white;
+}
+.contact {
+    height: 850px;
+    background-image: url(../images/fuji.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.goals {
+    height: 850px;
+    background-image: url(../images/japan12.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+.card-head {
+    font-family: MarcellusSC;
+}
+.AboutMe {
+    height: 850px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/heroimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: fit-content; 
+}
+.projectPage {
+    height: 850px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/Aboutme.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: fit-content; 
 }
 .projectDisplay {
     background-color: rgb(26, 25, 28);
@@ -130,13 +166,6 @@ nav {
     width: auto;
     margin-bottom: 5px;
 }
-.self {
-    height: auto;
-    width: auto;
-    border-radius: 5px;
-    border:white 1px solid;
-    z-index: 1;
-}
 .introText {
     background-color: rgb(26, 25, 28);
     height: auto;
@@ -153,6 +182,51 @@ nav {
 .Kiel{
     font-family: MarcellusSC;
     font-size: 2em;
+    background-color: rgb(50, 124, 78);
+    color: antiquewhite;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid white;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project {
+    font-family: MarcellusSC;
+    font-size: 2em;
+    background: linear-gradient(47deg, rgba(6,34,3,1) 31%, rgba(29,119,30,1) 88%);
+    color: antiquewhite;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid white;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+ul {
+    list-style-position: inside;
+
+}
+
+.jk {
+    background-image: url(../images/jk.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 250px;
+}
+.odin {
+    background-image: url(../images/odin.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 245px;
+    width: 100px;
+}
+.test {
+    display: none;
 }
 .tabs {
     background-color: rgb(26, 25, 28);
@@ -224,5 +298,4 @@ footer {
     font-family: MarcellusSC;
     text-align: left;
     padding: 10px;
-    margin-top: 15px;
 }
