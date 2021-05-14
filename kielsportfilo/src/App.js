@@ -13,10 +13,6 @@ import Goals from "./pages/Goals";
 function App() {
 const [appear] = useState(true);
 
-const FormHandler = (event) => {
- event.preventDefault();
-
-}
   return (
     <Router>
       <Nav />
