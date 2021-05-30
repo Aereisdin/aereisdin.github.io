@@ -9,7 +9,7 @@
 1. [Description](#description)
 2. [Usage](#usage)
 3. [License](#license)
-4. [Photo] (#photo)
+4. [Photo](#photo)
 5. [Questions](#questions)
 
 ## Usage Guidelines <a name="usage"></a>
