@@ -24,7 +24,7 @@ MIT license<br>
 
 ## Photo of the Portfolio <a name="photo"></a><br>
 
-![Photo of Profile](profilescreenshot.PNG)
+![Photo of Profile](./profilescreenshot.PNG)
 
 ## Questions, Comments or Concerns <a name="questions"></a><br>
 
