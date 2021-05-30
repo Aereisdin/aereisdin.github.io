@@ -3,7 +3,7 @@ import { useSpring, animated } from "react-spring"
 
 function GoalCard() {
 const props = useSpring({
-    delay: 2500,
+    delay: 300,
     to: {opacity: 1}, 
     from: { opacity: 0} 
 })
