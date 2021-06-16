@@ -1,12 +1,12 @@
-import Navigation from './components/Navigation'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import Navigation from './components/Nav/Navigation';
+import './App.scss';
+import Footer from './components/Nav/Footer';
 
 function App() {
   return (
     <>
     <Navigation/>
- 
+    <Footer/>
     </>
   );
 }
