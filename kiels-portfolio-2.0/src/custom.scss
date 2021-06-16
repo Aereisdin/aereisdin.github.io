@@ -3,7 +3,12 @@ $hover-font-color-nav: rgb(5, 70, 9);
 $border-color: #4b83789d;
 $background-hover-color: #16dc4e9d;
 
-/* NavBar */
+/* Button-Primary Bootstrap Modification */
+$theme-colors: (
+  "primary": $font-color-nav,
+);
+
+/* NavBar Bootstrap Modification */
 $navbar-padding-x: 5%;
 $navbar-nav-link-padding-x: 1.5rem;
 $navbar-light-color: rgba($font-color-nav, 0.75);
@@ -33,6 +38,15 @@ body {
 /* NavBar */
 nav {
   background-color: rgba(255, 255, 255, 0.612);
+  .nav-button {
+    color: $font-color-nav;
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+  }
+  .nav-button:hover {
+    color: rgba($hover-font-color-nav, 0.7);
+  }
   .navbar-brand {
     font-size: 2em;
     font-weight: 700;

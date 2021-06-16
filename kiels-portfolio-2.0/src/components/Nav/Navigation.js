@@ -1,5 +1,6 @@
 import React from 'react';
-import {Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
+import PastProjects from '../Modal/PastProjects'
 
 function Navigation() {
     return (
@@ -10,7 +11,7 @@ function Navigation() {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
                 <Nav.Link href="#home">About Me</Nav.Link>
-                <Nav.Link href="#link">Portfolio of Projects</Nav.Link>
+                <Nav.Link><PastProjects/></Nav.Link>
                 <Nav.Link href="#link">Current Work & Learning</Nav.Link>
                 </Nav>
              
