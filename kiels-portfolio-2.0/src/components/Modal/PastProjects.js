@@ -49,8 +49,8 @@ function PastProjects() {
           backdrop="static"
           keyboard={true}
         >
-          <Modal.Header>
-            <Modal.Title>Prior Projects</Modal.Title>
+          <Modal.Header className="d-flex justify-content-evenly">
+            <Modal.Title><h1 style={{fontFamily: "Rock Salt"}}>Prior Projects</h1></Modal.Title>
           </Modal.Header>
           <Modal.Body>
           <PastProjectsAccordion

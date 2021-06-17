@@ -21,23 +21,23 @@ function AboutMe() {
           backdrop="static"
           keyboard={true}
         >
-          <Modal.Header>
-            <Modal.Title><h1 className="align-self-center">Kiel Sprague</h1></Modal.Title>
+          <Modal.Header className="d-flex justify-content-evenly">
+            <Modal.Title><h1 style={{fontFamily: "Rock Salt"}}>Kiel Sprague</h1></Modal.Title>
           </Modal.Header>
           <Modal.Body>
 
             <Container fluid>
-                <Row className="text-center">
+                <Row className="text-center d-flex justify-content-evenly" style={{marginBottom: "10px"}}>
                     <Col sm={6} md={6} lg={6}>
-                        <Image className="img" src="./kiel.jpeg" thumbnail/>
+                        <Image className="img" src="./kiel.jpeg" rounded/>
                     </Col>
-                    <Col sm={6} md={6} lg={6}>
+                    <Col sm={6} md={6} lg={6} className="quote">
                         <br/> 
                       <p>"I believe that humanity through code and technology has the ability to make the world a better place for all peoples. Therefore, I strive to use code to make the world better."</p>
                       <br/> ~Kiel Sprague
                     </Col>
                 </Row>
-                <Row>
+                <Row className="d-flex justify-content-evenly">
                     <Col sm={6} md={4} lg={4} className="langs">
                     <h2>Languages & Technologies</h2>
                     <ul>
@@ -64,11 +64,16 @@ function AboutMe() {
                         <li>AWS</li>
                     </ul>
                     </Col>
-                    <Col sm={6} md={4} lg={4}>
-                        
-                    </Col>
-                    <Col sm={6} md={4} lg={4}>
-                    
+                    <Col sm={6} md={6} lg={6} className="message">
+                        <br/>
+                        <p>Sometimes it is hard to encapsulate what it is we are doing as we try
+                        to build towards a better place for ourselves.</p><br/>
+
+                        <p>I have acted in quite a few different capacities in the working world.
+                        Most of the positions I have held have been some hybrid position crossing
+                        technical and customer service related. I have always been an innovator,
+                        thinking outside the box. Striving and learning the newest and latest to 
+                        try and make something uniquely reflective of my talents. </p>
                     </Col>
                 </Row>
             </Container>

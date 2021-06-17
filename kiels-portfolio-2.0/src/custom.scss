@@ -1,15 +1,41 @@
+@font-face {
+  font-family: "Rock Salt";
+  src: url("./Font/RockSalt-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./Font/Raleway-VariableFont_wght.ttf");
+}
+/* Custom Variables */
+$Rock-Font: "Rock Salt", cursive;
 $font-color-nav: rgba(213, 57, 112, 0.784);
-$hover-font-color-nav: rgb(5, 70, 9);
-$border-color: #4b83789d;
-$background-hover-color: #16dc4e9d;
-$neutral-background: rgb(255, 240, 194);
+$hover-font-color-nav: rgba(135, 11, 54, 0.784);
+$border-color: rgb(255, 228, 228);
+$background-hover-color: rgb(208, 183, 183);
+$neutral-background: rgb(132, 112, 112);
 $neutral-background-variant: rgb(193, 222, 191);
 /* Button-Primary Bootstrap Modification */
 $theme-colors: (
   "primary": $font-color-nav,
   "secondary": $background-hover-color,
 );
-
+/* Card Bootstrap Modification */
+$card-spacer-y: 1%;
+$card-spacer-x: $spacer;
+$card-title-spacer-y: $spacer / 2;
+$card-border-width: null;
+$card-border-radius: $border-radius;
+$card-border-color: rgba($black, 0.125);
+$card-inner-border-radius: subtract($card-border-radius, $card-border-width);
+$card-cap-padding-y: $card-spacer-y / 2;
+$card-cap-padding-x: $card-spacer-x;
+$card-cap-bg: rgba($black, 0.03);
+$card-cap-color: null;
+$card-height: null;
+$card-color: null;
+$card-bg: transparent;
+$card-img-overlay-padding: $spacer;
+$card-group-margin: $grid-gutter-width / 2;
 /* NavBar Bootstrap Modification */
 $navbar-padding-x: 5%;
 $navbar-nav-link-padding-x: 1.5rem;
@@ -27,15 +53,16 @@ $navbar-light-brand-hover-color: $navbar-light-hover-color;
 
 /* Base Style */
 body {
-  background-color: rgb(247, 216, 197);
+  background-color: $border-color;
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("./images/pexels-satoshi-hirayama-7526815.jpg");
+    url("./images/pexels-eva-elijas-5779196.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: "Raleway";
 }
 /* NavBar */
 nav {
@@ -43,13 +70,15 @@ nav {
   .nav-button {
     color: $font-color-nav;
     background-color: transparent;
-    border: none;
+    border: transparent 4px solid;
     font-weight: 500;
   }
   .nav-button:hover {
-    color: rgba($hover-font-color-nav, 0.7);
+    border: $font-color-nav 4px solid;
+    border-radius: 10px;
   }
   .navbar-brand {
+    font-family: "Rock Salt";
     font-size: 2em;
     font-weight: 700;
     padding-left: 10px;
@@ -59,16 +88,16 @@ nav {
     font-size: 1.75em;
     font-weight: 500;
   }
-  a:hover {
-    background-color: $background-hover-color;
-    border-radius: 5px;
-  }
 }
 /* Modal*/
-
 .modal-header {
-  background-color: $border-color;
+  background-color: $neutral-background-variant;
+  font-weight: 600;
   color: $font-color-nav;
+}
+.modal-title {
+  font-weight: 800;
+  font-size: 2em;
 }
 .modal-body {
   background-color: $neutral-background;
@@ -83,6 +112,7 @@ nav {
   font-weight: 600;
   font-size: 1.5em;
   color: $font-color-nav;
+  border: $hover-font-color-nav 2px solid;
 }
 .card-header:hover {
   background-color: $background-hover-color;
@@ -90,22 +120,45 @@ nav {
 }
 .card-body {
   background-color: $neutral-background-variant;
-  border: $border-color 1px solid;
+  border: $font-color-nav 2px solid;
+  font-size: 1.45;
+  font-weight: 600;
+  .btn {
+    font-size: 1.25em;
+    font-weight: 700;
+  }
 }
 /* Img */
 .img {
   width: 75%;
 }
 /* About Me*/
+.quote {
+  color: $background-hover-color;
+  font-size: 1.25em;
+  font-weight: 700;
+}
 .langs {
   overflow-x: hidden;
   overflow-y: auto;
   height: 400px;
+  color: $background-hover-color;
+  font-size: 1.5em;
+  font-weight: 700;
+  border-right: $background-hover-color 2px solid;
+}
+.message {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 400px;
+  color: $background-hover-color;
+  font-size: 1.5em;
+  font-weight: 700;
 }
 /* Footer */
 .footer {
   position: fixed;
-  background-color: #16dc4e9d;
+  background-color: $neutral-background-variant;
   color: #222;
   font-size: 1.5em;
   font-weight: 700;
