@@ -2,10 +2,12 @@ $font-color-nav: rgba(213, 57, 112, 0.784);
 $hover-font-color-nav: rgb(5, 70, 9);
 $border-color: #4b83789d;
 $background-hover-color: #16dc4e9d;
-
+$neutral-background: rgb(255, 240, 194);
+$neutral-background-variant: rgb(193, 222, 191);
 /* Button-Primary Bootstrap Modification */
 $theme-colors: (
   "primary": $font-color-nav,
+  "secondary": $background-hover-color,
 );
 
 /* NavBar Bootstrap Modification */
@@ -62,7 +64,44 @@ nav {
     border-radius: 5px;
   }
 }
+/* Modal*/
 
+.modal-header {
+  background-color: $border-color;
+  color: $font-color-nav;
+}
+.modal-body {
+  background-color: $neutral-background;
+}
+.modal-footer {
+  background-color: $neutral-background-variant;
+  border: $border-color 1px solid;
+}
+/* Card Inside Accordion */
+.card-header {
+  background-color: $border-color;
+  font-weight: 600;
+  font-size: 1.5em;
+  color: $font-color-nav;
+}
+.card-header:hover {
+  background-color: $background-hover-color;
+  color: rgba($hover-font-color-nav, 0.7);
+}
+.card-body {
+  background-color: $neutral-background-variant;
+  border: $border-color 1px solid;
+}
+/* Img */
+.img {
+  width: 75%;
+}
+/* About Me*/
+.langs {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 400px;
+}
 /* Footer */
 .footer {
   position: fixed;
