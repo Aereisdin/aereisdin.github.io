@@ -34,7 +34,7 @@ function AboutMe() {
                     <Col sm={6} md={6} lg={6} className="quote">
                         <br/> 
                       <p>"I believe that humanity through code and technology has the ability to make the world a better place for all peoples. Therefore, I strive to use code to make the world better."</p>
-                      <br/> ~Kiel Sprague
+                      <br/>~Kiel Sprague
                     </Col>
                 </Row>
                 <Row className="d-flex justify-content-evenly">
