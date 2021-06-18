@@ -71,7 +71,7 @@ nav {
     color: $font-color-nav;
     background-color: transparent;
     border: transparent 4px solid;
-    font-weight: 500;
+    font-weight: 700;
   }
   .nav-button:hover {
     border: $font-color-nav 4px solid;
@@ -96,8 +96,9 @@ nav {
   color: $font-color-nav;
 }
 .modal-title {
-  font-weight: 800;
-  font-size: 2em;
+  h1 {
+    font-family: "Rock Salt";
+  }
 }
 .modal-body {
   background-color: $neutral-background;
@@ -105,6 +106,10 @@ nav {
 .modal-footer {
   background-color: $neutral-background-variant;
   border: $border-color 1px solid;
+  .btn {
+    font-weight: 700;
+    font-size: 1.5em;
+  }
 }
 /* Card Inside Accordion */
 .card-header {

@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import { Modal, Button, Container, Row, Col, Image } from 'react-bootstrap';
 
+
 function AboutMe() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+
     return (
         <>
+        
         <Button bsPrefix="nav-button" onClick={handleShow}>
         About Me
         </Button>
-  
+     
         <Modal
           show={show}
           size='lg'
@@ -22,7 +25,7 @@ function AboutMe() {
           keyboard={true}
         >
           <Modal.Header className="d-flex justify-content-evenly">
-            <Modal.Title><h1 style={{fontFamily: "Rock Salt"}}>Kiel Sprague</h1></Modal.Title>
+            <Modal.Title><h1>Kiel Sprague</h1></Modal.Title>
           </Modal.Header>
           <Modal.Body>
 
@@ -34,7 +37,7 @@ function AboutMe() {
                     <Col sm={6} md={6} lg={6} className="quote">
                         <br/> 
                       <p>"I believe that humanity through code and technology has the ability to make the world a better place for all peoples. Therefore, I strive to use code to make the world better."</p>
-                      <br/>~Kiel Sprague
+                      <br/><p>~Kiel Sprague</p>
                     </Col>
                 </Row>
                 <Row className="d-flex justify-content-evenly">
