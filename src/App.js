@@ -1,11 +1,13 @@
 import Navigation from './components/Nav/Navigation';
-import './App.scss';
+import Body from './components/Body'
 import Footer from './components/Nav/Footer';
+import './App.scss';
 
 function App() {
   return (
     <>
     <Navigation/>
+    <Body />
     <Footer/>
     </>
   );

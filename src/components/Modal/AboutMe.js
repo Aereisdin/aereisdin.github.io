@@ -32,7 +32,7 @@ function AboutMe() {
             <Container fluid>
                 <Row className="text-center d-flex justify-content-evenly" style={{marginBottom: "10px"}}>
                     <Col sm={6} md={6} lg={6}>
-                        <Image className="img" src="./kiel.jpeg" rounded/>
+                        <Image className="img" src="./Me.JPG" rounded/>
                     </Col>
                     <Col sm={6} md={6} lg={6} className="quote">
                         <br/> 

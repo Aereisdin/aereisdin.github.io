@@ -54,11 +54,7 @@ $navbar-light-brand-hover-color: $navbar-light-hover-color;
 /* Base Style */
 body {
   background-color: $border-color;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5)
-    ),
-    url("./images/pexels-eva-elijas-5779196.jpg");
+  background-image: url("./images/pexels-eva-elijas-5779196.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,6 +132,10 @@ nav {
 /* Img */
 .img {
   width: 75%;
+}
+.c-img {
+  width: 100%;
+  height: calc(50% width);
 }
 /* About Me*/
 .quote {
