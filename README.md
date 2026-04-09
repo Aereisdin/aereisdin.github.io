@@ -1,41 +1,73 @@
-# My Portfolio
+# React + TypeScript + Vite
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-### This is a portfolio I built following some of the techniques I have learned in class and on my own as I explore and learn more in the wide world of code.
+Currently, two official plugins are available:
 
-## Table of Contents
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-1. [Description](#description)
-2. [Usage](#usage)
-3. [License](#license)
-4. [Photo](#photo)
-5. [Link to Live Application](#link)
-6. [Questions](#questions)
+## React Compiler
 
-## Usage Guidelines <a name="usage"></a><br>
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-This page has been created to browse and get an idea of who I am and the content I have been making and assisting with. As such I would browse away, feel free to reach out with any questions.
+## Expanding the ESLint configuration
 
-## License for this Application <a name="license"></a><br>
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-If you click the badge below it will take you to the license details.<br>
-MIT license<br>
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-## Photo of the Portfolio <a name="photo"></a><br>
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-![Photo of Profile](./profilescreenshot.png)
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## Link to Live Application <a name="link"></a><br>
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-[Live Profile](https://aereisdin.github.io/)
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## Questions, Comments or Concerns <a name="questions"></a><br>
-
-### Please direct to my GitHub or Email
-
-Git Hub: [Aereisdin](https://www.github.com/Aereisdin)<br>
-Email: [aereisdin@gmail.com](aereisdin@gmail.com)<br>
-
-Thank you for checking out my application!
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
