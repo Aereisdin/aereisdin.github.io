@@ -12,10 +12,11 @@ function App() {
 
   return (
     <>    
-    <div>
-      <Header />
-    </div>
+
       <section id="center">
+        <div>
+          <Header />
+        </div>
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
