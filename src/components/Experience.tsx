@@ -2,7 +2,7 @@ import './Experience.css'
 
 function Experience() {
   return (
-<section>
+<section className="experience">
   <h2>Experience</h2>
 
   <h3>Core Responsibilities</h3>

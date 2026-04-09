@@ -1,22 +1,23 @@
-section {
+.experience section {
   margin: 2rem 0;
 }
 
-h2 {
+.experience h2 {
   font-size: 2rem;
 }
 
-h3 {
+.experience h3 {
     margin-left: 1.5rem;
     text-align: left;
   margin-top: 1.5rem;
   color: #d3cbcb;
 }
 
-ul {
+.experience ul {
   margin-left: 1.5rem;
 }
 
-li {
+.experience li {
   text-align: left;
 }
+
