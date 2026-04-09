@@ -2,13 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import Header from './components/Header'
+import Footer from './components/Footer'
 import './App.css'
+import Experience from './components/Experience'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <>    
+    <div>
+      <Header />
+    </div>
       <section id="center">
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
@@ -29,7 +35,7 @@ function App() {
           Count is {count}
         </button>
       </section>
-
+      <Experience />
       <div className="ticks"></div>
 
       <section id="next-steps">
@@ -115,6 +121,7 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
+      <Footer />
     </>
   )
 }

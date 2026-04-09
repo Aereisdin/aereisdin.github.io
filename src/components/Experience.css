@@ -1,0 +1,22 @@
+section {
+  margin: 2rem 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+    margin-left: 1.5rem;
+    text-align: left;
+  margin-top: 1.5rem;
+  color: #d3cbcb;
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+li {
+  text-align: left;
+}
