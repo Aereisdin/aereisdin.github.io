@@ -9,12 +9,10 @@ function Footer() {
   return (
     <footer className="footer reveal-on-scroll">
       <div>
-        <p className="footer__eyebrow">Connect</p>
-        <h2>If any of this overlaps with your world, feel free to reach out</h2>
+        <p className="footer__eyebrow">Contact</p>
+        <h2>If you are working on something that needs structure, clarity, or refinement, I would be glad to connect.</h2>
         <p className="footer__copy">
-          I am always up for talking shop about IT operations, Salesforce,
-          internal tooling, or the weird process problems that somehow become
-          technical problems.
+          Let&apos;s build something that works.
         </p>
       </div>
 

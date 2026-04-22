@@ -54,22 +54,17 @@ function Header() {
   return (
     <header className="hero section reveal-on-scroll">
       <div className="hero__content">
-        <p className="section__eyebrow">Systems builder</p>
+        <p className="section__eyebrow">Kiel Sprague</p>
         <h1 className="hero__name">Kiel Sprague</h1>
-        <p className="hero__role">
-          Working across software, infrastructure, operations, and the systems
-          that connect them.
-        </p>
+        <p className="hero__role">Systems Builder</p>
         <p className="hero__summary">
-          I build practical systems that make work clearer, steadier, and easier
-          to scale.
+          I build and refine the systems behind modern work, connecting people,
+          processes, and technology into something reliable, efficient, and
+          thoughtfully designed.
         </p>
         <p className="hero__detail">
-          Most of my work sits at the intersection of Salesforce automation,
-          web tools, Microsoft 365, security, and the operational details that
-          keep an organization moving. I pay attention to how systems connect,
-          where friction shows up, and what needs to be simplified so people can
-          actually rely on it.
+          Guided by clarity, durability, and the belief that well-built systems
+          should feel as good as they function.
         </p>
         <div className="hero__actions">
           <a className="button-link" href="#projects">
@@ -82,16 +77,16 @@ function Header() {
 
         <div className="hero__glance" aria-label="Work at a glance">
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Systems thinking</p>
-            <p>I start by looking at the whole system, not just the symptom in front of me.</p>
+            <p className="hero__glance-label">People and process</p>
+            <p>I pay attention to how work moves between people, systems, and the points where things usually break down.</p>
           </article>
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Maintainable fixes</p>
-            <p>The best solution is the one people can still support six months later.</p>
+            <p className="hero__glance-label">Durable systems</p>
+            <p>I want solutions that stay stable, readable, and useful long after the first implementation.</p>
           </article>
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Experience matters</p>
-            <p>I care about how systems feel to use, whether the space is digital, operational, or physical.</p>
+            <p className="hero__glance-label">Intentional design</p>
+            <p>I care about systems that are not only functional, but feel clear, thoughtful, and well-crafted.</p>
           </article>
         </div>
       </div>
@@ -129,9 +124,9 @@ function Header() {
         </div>
 
         <ul className="hero__highlights">
-          <li>I build across IT operations, automation, and infrastructure.</li>
-          <li>I simplify processes so they hold up in real use.</li>
-          <li>I care about systems and spaces that feel intentional.</li>
+          <li>I build structure behind modern work.</li>
+          <li>I refine systems for clarity and reliability.</li>
+          <li>I care how solutions function and how they feel.</li>
         </ul>
       </div>
     </header>

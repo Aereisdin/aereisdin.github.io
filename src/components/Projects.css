@@ -134,3 +134,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+.projects__card h3 {
+  margin: 0;
+}

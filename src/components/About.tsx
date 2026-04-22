@@ -1,17 +1,17 @@
 import './About.css'
 
 const aboutParagraphs = [
-  'I approach problems as a systems thinker. I want to understand how the pieces connect, where the friction lives, and what is actually causing work to become harder than it needs to be.',
-  'That usually means working across more than one layer at a time: software, infrastructure, documentation, process, and the day-to-day operational details that determine whether something holds together.',
-  'I am less interested in novelty than in usefulness. The solutions I trust most are practical, maintainable, and capable of scaling over time without becoming fragile.',
-  'That mindset extends beyond software. The Fox, Lantern, and Lemon is part of the same way of thinking: building an environment that feels intentional, cohesive, and well-considered, with the same attention to flow, detail, and experience that I bring to technical systems.',
+  'I work at the intersection of systems, structure, and usability.',
+  'In my day-to-day work, I manage and improve the technical foundation of an organization, maintaining infrastructure, supporting users, and ensuring that everything people rely on is stable, secure, and ready to work.',
+  'Beyond that, I focus on building better ways of working. I design and refine processes within Salesforce and across connected systems, turning complex workflows into something more streamlined, more transparent, and easier to use.',
+  'What I enjoy most is creating systems from the ground up, where technical capability meets thoughtful design. Whether it is automation, internal tools, or web-based workflows, I aim to build solutions that feel clean, durable, and intuitive over time.',
 ]
 
 const workAreas = [
-  'Salesforce automation and process design that reduces manual work without making the system harder to understand.',
-  'Web development and integrations that connect tools cleanly and support the real workflow around them.',
-  'Microsoft 365, security, devices, and infrastructure work that keeps day-to-day operations dependable.',
-  'Documentation, internal tooling, and operational cleanup that make systems easier to support over time.',
+  'Systems and infrastructure that support stable, secure day-to-day work.',
+  'Business systems and automation that improve process clarity, efficiency, and data quality.',
+  'Web and process design that connect systems together into smoother user experiences.',
+  'Operational support that keeps people, devices, and software ecosystems running without friction.',
 ]
 
 function About() {
@@ -19,10 +19,10 @@ function About() {
     <section id="about" className="section about reveal-on-scroll">
       <div className="section__header">
         <p className="section__eyebrow">About</p>
-        <h2>How I think about the work</h2>
+        <h2>About</h2>
         <p>
-          I do my best work where technology, operations, and real-world use all
-          start overlapping.
+          I build where technical structure and real-world usability need to
+          meet cleanly.
         </p>
       </div>
 
@@ -35,7 +35,7 @@ function About() {
         </article>
 
         <article className="about__card about__card--accent">
-          <h3>What I work on</h3>
+          <h3>How that shows up in practice</h3>
           <ul>
             {workAreas.map((area) => (
               <li key={area}>{area}</li>
