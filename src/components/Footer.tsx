@@ -2,6 +2,7 @@ import GitHubIcon from '../assets/github.svg?react'
 import InstagramIcon from '../assets/instagram.svg?react'
 import LinkedInIcon from '../assets/linkedin.svg?react'
 import { useLanguage } from '../i18n/useLanguage'
+import { siteConfig } from '../siteConfig'
 import './Footer.css'
 
 function Footer() {
@@ -19,7 +20,7 @@ function Footer() {
 
       <div className="footer__links" aria-label={contact.socialLinksAriaLabel}>
         <a
-          href="https://linkedin.com/in/kiel-sprague"
+          href={siteConfig.socialLinks.linkedin}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={contact.socialLinks.linkedinAriaLabel}
@@ -28,7 +29,7 @@ function Footer() {
           <span>{contact.socialLinks.linkedin}</span>
         </a>
         <a
-          href="https://www.instagram.com/aereisdin/"
+          href={siteConfig.socialLinks.instagram}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={contact.socialLinks.instagramAriaLabel}
@@ -37,7 +38,7 @@ function Footer() {
           <span>{contact.socialLinks.instagram}</span>
         </a>
         <a
-          href="https://github.com/aereisdin"
+          href={siteConfig.socialLinks.github}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={contact.socialLinks.githubAriaLabel}

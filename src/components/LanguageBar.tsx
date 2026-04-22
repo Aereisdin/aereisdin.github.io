@@ -2,7 +2,9 @@ import GitHubIcon from '../assets/github.svg?react'
 import InstagramIcon from '../assets/instagram.svg?react'
 import LinkedInIcon from '../assets/linkedin.svg?react'
 import { useEffect, useState } from 'react'
+import { getPathForLanguage } from '../i18n/languageRoutes'
 import { useLanguage } from '../i18n/useLanguage'
+import { siteConfig } from '../siteConfig'
 import './LanguageBar.css'
 
 function AirbnbIcon() {
@@ -14,29 +16,30 @@ function AirbnbIcon() {
 }
 
 function LanguageBar() {
-  const { language, setLanguage, languages, copy } = useLanguage()
+  const { language, languages, copy } = useLanguage()
   const [isScrolled, setIsScrolled] = useState(false)
+  const [currentHash, setCurrentHash] = useState('')
   const socialLinks = [
     {
-      href: 'https://linkedin.com/in/kiel-sprague',
+      href: siteConfig.socialLinks.linkedin,
       ariaLabel: copy.contact.socialLinks.linkedinAriaLabel,
       label: copy.contact.socialLinks.linkedin,
       Icon: LinkedInIcon,
     },
     {
-      href: 'https://www.instagram.com/aereisdin/',
+      href: siteConfig.socialLinks.instagram,
       ariaLabel: copy.contact.socialLinks.instagramAriaLabel,
       label: copy.contact.socialLinks.instagram,
       Icon: InstagramIcon,
     },
     {
-      href: 'https://github.com/aereisdin',
+      href: siteConfig.socialLinks.github,
       ariaLabel: copy.contact.socialLinks.githubAriaLabel,
       label: copy.contact.socialLinks.github,
       Icon: GitHubIcon,
     },
     {
-      href: 'https://airbnb.com/h/foxlanternlemon',
+      href: siteConfig.socialLinks.airbnb,
       ariaLabel: copy.venture.ctaLabel,
       label: 'Airbnb',
       Icon: AirbnbIcon,
@@ -52,6 +55,17 @@ function LanguageBar() {
     window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentHash(window.location.hash)
+    }
+
+    handleHashChange()
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => window.removeEventListener('hashchange', handleHashChange)
   }, [])
 
   return (
@@ -94,18 +108,16 @@ function LanguageBar() {
             <p className="language-bar__label">{copy.languageBar.label}</p>
             <div className="language-bar__buttons">
               {languages.map((item) => (
-                <button
+                <a
                   key={item.code}
-                  type="button"
                   className={`language-bar__button${language === item.code ? ' is-active' : ''}`}
-                  onClick={() => setLanguage(item.code)}
-                  disabled={!item.isAvailable}
-                  aria-pressed={language === item.code}
+                  href={`${getPathForLanguage(item.code)}${currentHash}`}
+                  aria-current={language === item.code ? 'page' : undefined}
                   aria-label={item.label}
                   title={!item.isAvailable ? copy.languageBar.unavailableLabel : item.label}
                 >
                   {item.shortLabel}
-                </button>
+                </a>
               ))}
             </div>
           </>

@@ -12,6 +12,7 @@ export const defaultLanguage: LanguageCode = 'en'
 export type SiteCopy = {
   meta: {
     title: string
+    description: string
   }
   languageBar: {
     label: string
@@ -124,6 +125,8 @@ export type SiteCopy = {
 export const englishCopy: SiteCopy = {
   meta: {
     title: 'Kiel Sprague | Systems Builder',
+    description:
+      'Kiel Sprague builds reliable IT systems, workflow automation, and internal tools that make work easier to run.',
   },
   languageBar: {
     label: 'Language',
@@ -355,6 +358,8 @@ export const spanishCopy: SiteCopy = {
   ...englishCopy,
   meta: {
     title: 'Kiel Sprague | Constructor de sistemas',
+    description:
+      'Kiel Sprague desarrolla sistemas de TI fiables, automatizacion de flujos de trabajo y herramientas internas que hacen el trabajo mas claro y facil de operar.',
   },
   languageBar: {
     ...englishCopy.languageBar,
@@ -580,6 +585,8 @@ export const japaneseCopy: SiteCopy = {
   ...englishCopy,
   meta: {
     title: 'Kiel Sprague | システムビルダー',
+    description:
+      'Kiel Spragueは、信頼できるITシステム、業務自動化、そして仕事をより明快で運用しやすくする社内ツールを構築します。',
   },
   languageBar: {
     ...englishCopy.languageBar,
@@ -798,6 +805,8 @@ export const germanCopy: SiteCopy = {
   ...englishCopy,
   meta: {
     title: 'Kiel Sprague | Systemarchitekt',
+    description:
+      'Kiel Sprague entwickelt verlaessliche IT-Systeme, Workflow-Automatisierung und interne Werkzeuge, die Arbeit klarer und leichter betreibbar machen.',
   },
   languageBar: {
     ...englishCopy.languageBar,
@@ -1016,7 +1025,7 @@ export const germanCopy: SiteCopy = {
   },
 }
 
-export const siteCopy: Partial<Record<LanguageCode, SiteCopy>> = {
+export const siteCopy: Record<LanguageCode, SiteCopy> = {
   en: englishCopy,
   es: spanishCopy,
   ja: japaneseCopy,

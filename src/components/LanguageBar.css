@@ -33,6 +33,9 @@
 }
 
 .language-bar__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 3rem;
   min-height: 2.4rem;
   padding: 0.45rem 0.8rem;
@@ -44,6 +47,7 @@
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
   transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
@@ -52,15 +56,10 @@
   background: rgba(184, 115, 51, 0.14);
 }
 
-.language-bar__button:hover:not(:disabled),
-.language-bar__button:focus-visible:not(:disabled) {
+.language-bar__button:hover,
+.language-bar__button:focus-visible {
   transform: translateY(-1px);
   border-color: rgba(184, 115, 51, 0.32);
-}
-
-.language-bar__button:disabled {
-  opacity: 0.42;
-  cursor: not-allowed;
 }
 
 .language-bar__home {

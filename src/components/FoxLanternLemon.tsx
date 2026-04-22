@@ -1,5 +1,6 @@
 import crestLogo from '../assets/FoxLanternLemon35.png'
 import { useLanguage } from '../i18n/useLanguage'
+import { siteConfig } from '../siteConfig'
 import './FoxLanternLemon.css'
 
 function FoxLanternLemon() {
@@ -42,7 +43,7 @@ function FoxLanternLemon() {
           <div className="fox-section__actions">
             <a
               className="button-link"
-              href="https://airbnb.com/h/foxlanternlemon"
+              href={siteConfig.socialLinks.airbnb}
               target="_blank"
               rel="noopener noreferrer"
             >
