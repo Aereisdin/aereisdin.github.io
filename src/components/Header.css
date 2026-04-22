@@ -1,6 +1,6 @@
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  grid-template-columns: minmax(0, 1.6fr) minmax(340px, 1fr);
   gap: 24px;
   align-items: stretch;
   overflow: hidden;
@@ -142,9 +142,11 @@
 }
 
 .hero__terminal-command {
+  min-height: 1.2em;
   font-family: var(--mono);
   font-size: 0.86rem;
   color: #f8fafc;
+  white-space: nowrap;
 }
 
 .hero__terminal-cursor {
