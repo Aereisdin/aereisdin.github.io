@@ -6,6 +6,7 @@ import FoxLanternLemon from './components/FoxLanternLemon'
 import Personal from './components/Personal'
 import Footer from './components/Footer'
 import Experience from './components/Experience'
+import LanguageBar from './components/LanguageBar'
 import './App.css'
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
 
   return (
     <div className="page-shell">
+      <LanguageBar />
       <main className="page-content">
         <Header />
         <About />

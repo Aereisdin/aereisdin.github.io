@@ -158,7 +158,9 @@
   font-family: var(--mono);
   font-size: 0.86rem;
   color: #f8fafc;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .hero__terminal-cursor {

@@ -1,52 +1,53 @@
 import GitHubIcon from '../assets/github.svg?react'
 import InstagramIcon from '../assets/instagram.svg?react'
 import LinkedInIcon from '../assets/linkedin.svg?react'
+import { useLanguage } from '../i18n/useLanguage'
 import './Footer.css'
 
 function Footer() {
+  const { copy } = useLanguage()
+  const { contact } = copy
   const year = new Date().getFullYear()
 
   return (
     <footer className="footer reveal-on-scroll">
       <div>
-        <p className="footer__eyebrow">Contact</p>
-        <h2>If you are working on something that needs structure, clarity, or refinement, I would be glad to connect.</h2>
-        <p className="footer__copy">
-          Let&apos;s build something that works.
-        </p>
+        <p className="footer__eyebrow">{contact.eyebrow}</p>
+        <h2>{contact.title}</h2>
+        <p className="footer__copy">{contact.copy}</p>
       </div>
 
-      <div className="footer__links" aria-label="Social links">
+      <div className="footer__links" aria-label={contact.socialLinksAriaLabel}>
         <a
           href="https://linkedin.com/in/kiel-sprague"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit my LinkedIn profile"
+          aria-label={contact.socialLinks.linkedinAriaLabel}
         >
           <LinkedInIcon className="icon" />
-          <span>LinkedIn</span>
+          <span>{contact.socialLinks.linkedin}</span>
         </a>
         <a
           href="https://www.instagram.com/aereisdin/"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit my Instagram profile"
+          aria-label={contact.socialLinks.instagramAriaLabel}
         >
           <InstagramIcon className="icon" />
-          <span>Instagram</span>
+          <span>{contact.socialLinks.instagram}</span>
         </a>
         <a
           href="https://github.com/aereisdin"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Visit my GitHub profile"
+          aria-label={contact.socialLinks.githubAriaLabel}
         >
           <GitHubIcon className="icon" />
-          <span>GitHub</span>
+          <span>{contact.socialLinks.github}</span>
         </a>
       </div>
 
-      <p className="footer__meta">&copy; {year} Kiel Sprague</p>
+      <p className="footer__meta">&copy; {year} {contact.metaName}</p>
     </footer>
   )
 }

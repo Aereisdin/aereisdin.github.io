@@ -1,26 +1,11 @@
 import { useEffect, useState } from 'react'
+import { useLanguage } from '../i18n/useLanguage'
 import './Header.css'
 
-const terminalLines = [
-  {
-    command: 'map-system-friction',
-    note: 'Find the handoff, bottleneck, or workaround that is creating the most drag.',
-  },
-  {
-    command: 'stabilize-the-core',
-    note: 'Reliable foundations matter more than impressive complexity.',
-  },
-  {
-    command: 'untangle-salesforce-flow',
-    note: 'Automation should clarify a process, not bury it under more moving parts.',
-  },
-  {
-    command: 'design-the-handoff',
-    note: 'Tooling, documentation, and ownership should make the next step obvious.',
-  },
-]
-
 function Header() {
+  const { copy } = useLanguage()
+  const { hero } = copy
+  const terminalLines = hero.terminalLines
   const [activeLine, setActiveLine] = useState(0)
   const [typedState, setTypedState] = useState({ lineIndex: -1, length: 0 })
 
@@ -30,7 +15,7 @@ function Header() {
     }, 2400)
 
     return () => window.clearInterval(timer)
-  }, [])
+  }, [terminalLines.length])
 
   useEffect(() => {
     const activeCommand = terminalLines[activeLine].command
@@ -49,55 +34,44 @@ function Header() {
     }, 42)
 
     return () => window.clearInterval(timer)
-  }, [activeLine])
+  }, [activeLine, terminalLines])
 
   return (
     <header className="hero section reveal-on-scroll">
       <div className="hero__content">
-        <p className="section__eyebrow">Kiel Sprague</p>
-        <h1 className="hero__name">Kiel Sprague</h1>
-        <p className="hero__role">Systems Builder</p>
+        <p className="section__eyebrow">{hero.eyebrow}</p>
+        <h1 className="hero__name">{hero.name}</h1>
+        <p className="hero__role">{hero.role}</p>
         <p className="hero__summary">
-          I build and refine the systems behind modern work, connecting people,
-          processes, and technology into something reliable, efficient, and
-          thoughtfully designed.
+          {hero.summary}
         </p>
-        <p className="hero__detail">
-          Guided by clarity, durability, and the belief that well-built systems
-          should feel as good as they function.
-        </p>
+        <p className="hero__detail">{hero.detail}</p>
         <div className="hero__actions">
           <a className="button-link" href="#projects">
-            See what I work on
+            {hero.actions.projects}
           </a>
           <a className="button-link button-link--secondary" href="#experience">
-            Read the experience
+            {hero.actions.experience}
           </a>
         </div>
 
-        <div className="hero__glance" aria-label="Work at a glance">
-          <article className="hero__glance-card">
-            <p className="hero__glance-label">People and process</p>
-            <p>I pay attention to how work moves between people, systems, and the points where things usually break down.</p>
-          </article>
-          <article className="hero__glance-card">
-            <p className="hero__glance-label">Durable systems</p>
-            <p>I want solutions that stay stable, readable, and useful long after the first implementation.</p>
-          </article>
-          <article className="hero__glance-card">
-            <p className="hero__glance-label">Intentional design</p>
-            <p>I care about systems that are not only functional, but feel clear, thoughtful, and well-crafted.</p>
-          </article>
+        <div className="hero__glance" aria-label={hero.glanceAriaLabel}>
+          {hero.glanceCards.map((card) => (
+            <article key={card.label} className="hero__glance-card">
+              <p className="hero__glance-label">{card.label}</p>
+              <p>{card.text}</p>
+            </article>
+          ))}
         </div>
       </div>
-      <div className="hero__panel" aria-label="Terminal snapshot">
+      <div className="hero__panel" aria-label={hero.panelAriaLabel}>
         <div className="hero__panel-top">
           <div className="hero__traffic-lights" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <p className="hero__panel-label">A rough summary of the work</p>
+          <p className="hero__panel-label">{hero.panelLabel}</p>
         </div>
 
         <div className="hero__terminal" aria-live="polite">
@@ -124,9 +98,9 @@ function Header() {
         </div>
 
         <ul className="hero__highlights">
-          <li>I build structure behind modern work.</li>
-          <li>I refine systems for clarity and reliability.</li>
-          <li>I care how solutions function and how they feel.</li>
+          {hero.highlights.map((highlight) => (
+            <li key={highlight}>{highlight}</li>
+          ))}
         </ul>
       </div>
     </header>
