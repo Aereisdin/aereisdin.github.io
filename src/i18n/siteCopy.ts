@@ -17,6 +17,8 @@ export type SiteCopy = {
     label: string
     ariaLabel: string
     unavailableLabel: string
+    homeLabel: string
+    homeAriaLabel: string
   }
   hero: {
     eyebrow: string
@@ -127,6 +129,8 @@ export const englishCopy: SiteCopy = {
     label: 'Language',
     ariaLabel: 'Language selector',
     unavailableLabel: 'Translations coming soon',
+    homeLabel: 'Home',
+    homeAriaLabel: 'Return to the top of the page',
   },
   hero: {
     eyebrow: 'Kiel Sprague',

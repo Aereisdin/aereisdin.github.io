@@ -9,6 +9,13 @@
   background: rgba(255, 252, 247, 0.82);
   box-shadow: 0 12px 34px rgba(47, 55, 66, 0.1);
   backdrop-filter: blur(18px);
+  transition: padding 180ms ease, border-radius 180ms ease;
+}
+
+.language-bar.is-compact {
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 999px;
 }
 
 .language-bar__label {
@@ -56,10 +63,92 @@
   cursor: not-allowed;
 }
 
+.language-bar__home {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(184, 115, 51, 0.2);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(247, 238, 226, 0.88));
+  color: var(--text-strong);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.language-bar__home:hover,
+.language-bar__home:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(184, 115, 51, 0.32);
+  box-shadow: 0 10px 24px rgba(184, 115, 51, 0.18);
+}
+
+.language-bar__home-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.language-bar__home-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.language-bar__socials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-bar__social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(184, 115, 51, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text-strong);
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.language-bar__social-link:hover,
+.language-bar__social-link:focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(184, 115, 51, 0.28);
+  box-shadow: 0 10px 24px rgba(184, 115, 51, 0.14);
+}
+
+.language-bar__social-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.language-bar__social-icon--airbnb {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
 @media (max-width: 720px) {
   .language-bar {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .language-bar.is-compact {
+    align-items: stretch;
+    gap: 10px;
   }
 
   .language-bar__buttons {
@@ -68,5 +157,14 @@
 
   .language-bar__button {
     flex: 1 1 0;
+  }
+
+  .language-bar.is-compact .language-bar__home {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .language-bar__socials {
+    justify-content: center;
   }
 }

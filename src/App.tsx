@@ -34,7 +34,7 @@ function App() {
   }, [])
 
   return (
-    <div className="page-shell">
+    <div id="page-top" className="page-shell">
       <LanguageBar />
       <main className="page-content">
         <Header />
