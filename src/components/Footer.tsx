@@ -7,7 +7,7 @@ function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="footer">
+    <footer className="footer reveal-on-scroll">
       <div>
         <p className="footer__eyebrow">Connect</p>
         <h2>If any of this overlaps with your world, feel free to reach out</h2>

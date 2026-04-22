@@ -14,7 +14,7 @@ const focusAreas = [
 
 function About() {
   return (
-    <section id="about" className="section about">
+    <section id="about" className="section about reveal-on-scroll">
       <div className="section__header">
         <p className="section__eyebrow">About</p>
         <h2>A little more about how I work</h2>

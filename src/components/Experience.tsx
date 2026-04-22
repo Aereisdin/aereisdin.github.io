@@ -29,7 +29,7 @@ const experienceAreas = [
 
 function Experience() {
   return (
-    <section id="experience" className="section experience">
+    <section id="experience" className="section experience reveal-on-scroll">
       <div className="section__header">
         <p className="section__eyebrow">Experience</p>
         <h2>The kind of work I end up doing most often</h2>
