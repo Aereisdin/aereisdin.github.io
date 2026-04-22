@@ -1,75 +1,58 @@
 import './Experience.css'
 
+const experienceAreas = [
+  {
+    title: 'Infrastructure and support',
+    items: [
+      'Handle day-to-day IT work for a small organization, from user support to endpoints and networking.',
+      'Take care of device lifecycle, patching, and the routine upkeep that keeps things from drifting.',
+      'Support Microsoft 365, VOIP, and the other tools people need to get through the workday.',
+    ],
+  },
+  {
+    title: 'Systems and automation',
+    items: [
+      'Build Salesforce workflows that cut down manual work without making the process harder to understand.',
+      'Use Flows, Apex, Visualforce, and Lightning Web Components when a plain configuration is not enough.',
+      'Clean up data, reporting, and visibility when systems start getting messy around the edges.',
+    ],
+  },
+  {
+    title: 'Security and resilience',
+    items: [
+      'Look after backups, monitoring, and general stability for both in-office and remote users.',
+      'Apply security habits that are practical enough to stick, not just good on paper.',
+      'Work through cross-system issues without losing track of the actual business problem underneath them.',
+    ],
+  },
+]
+
 function Experience() {
   return (
-<section className="experience">
-  <h2>Experience</h2>
+    <section id="experience" className="section experience">
+      <div className="section__header">
+        <p className="section__eyebrow">Experience</p>
+        <h2>The kind of work I end up doing most often</h2>
+        <p>
+          A lot of my work comes down to keeping systems reliable, untangling
+          process problems, and building something more maintainable than what
+          was there before.
+        </p>
+      </div>
 
-  <h3>Core Responsibilities</h3>
-  <ul>
-    <li>
-      Manage and maintain IT infrastructure for a ~20-user organization, including Windows systems, networking, and user support
-    </li>
-    <li>
-      Oversee device lifecycle management, ensuring all systems, peripherals, and software remain secure and up to date
-    </li>
-    <li>
-      Administer and optimize cloud-based tools including Microsoft 365 and VOIP systems
-    </li>
-  </ul>
-
-  <h3>Systems & Automation</h3>
-  <ul>
-    <li>
-      Design and implement automated workflows within Salesforce to streamline business operations and reduce manual effort
-    </li>
-    <li>
-      Develop custom solutions using Salesforce tools (Flows, Apex, Visualforce, LWC) to support internal processes
-    </li>
-    <li>
-      Maintain and improve data integrity, reporting, and system reliability across platforms
-    </li>
-  </ul>
-
-  <h3>Web & Process Development</h3>
-  <ul>
-    <li>
-      Build and refine web-based solutions for internal and customer-facing workflows
-    </li>
-    <li>
-      Translate business requirements into scalable technical implementations across multiple systems
-    </li>
-    <li>
-      Continuously iterate on UI/UX and process efficiency through hands-on development
-    </li>
-  </ul>
-
-  <h3>Security & Reliability</h3>
-  <ul>
-    <li>
-      Manage backups, system monitoring, and network stability for both on-site and remote users
-    </li>
-    <li>
-      Implement security best practices across endpoints, networks, and cloud services
-    </li>
-    <li>
-      Troubleshoot complex cross-system issues involving hardware, software, and connectivity
-    </li>
-  </ul>
-
-  <h3>Cross-Functional Collaboration</h3>
-  <ul>
-    <li>
-      Work closely with sales, marketing, and operations teams to improve tools and workflows
-    </li>
-    <li>
-      Act as the bridge between technical systems and business needs
-    </li>
-    <li>
-      Provide ongoing support, training, and documentation for internal users
-    </li>
-  </ul>
-</section>
+      <div className="experience__grid">
+        {experienceAreas.map((area) => (
+          <article key={area.title} className="experience__card">
+            <h3>{area.title}</h3>
+            <ul>
+              {area.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </article>
+        ))}
+      </div>
+    </section>
   )
 }
 
