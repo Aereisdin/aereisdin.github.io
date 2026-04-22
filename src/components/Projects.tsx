@@ -4,15 +4,15 @@ import './Projects.css'
 const projectAreas = [
   {
     id: 'personal-site',
-    title: 'Personal site in progress',
+    title: 'Personal platform',
     description:
-      'This site is part learning project, part excuse to finally make a homepage that sounds like me instead of a template.',
+      'This site is a place to present my work, sharpen the way I talk about it, and build a homepage with a clearer point of view than a template can offer.',
     challenge:
       'Turning a default starter into something with a point of view without overbuilding it.',
     build:
-      'A lightweight React and TypeScript homepage with custom layout, playful motion, and cleaner personal copy.',
+      'A lightweight React and TypeScript homepage with custom layout, deliberate interaction, and copy that better reflects how I actually work.',
     payoff:
-      'It gives me a place to experiment in public and improve the site in small pieces instead of waiting for a perfect rewrite.',
+      'It gives me a foundation I can keep extending as the work evolves instead of waiting for a perfect all-at-once rebuild.',
     tags: ['Vite', 'React', 'TypeScript'],
   },
   {

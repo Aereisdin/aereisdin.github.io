@@ -2,27 +2,27 @@ import './Experience.css'
 
 const experienceAreas = [
   {
-    title: 'Infrastructure and support',
+    title: 'Infrastructure and operations',
     items: [
-      'Handle day-to-day IT work for a small organization, from user support to endpoints and networking.',
-      'Take care of device lifecycle, patching, and the routine upkeep that keeps things from drifting.',
-      'Support Microsoft 365, VOIP, and the other tools people need to get through the workday.',
+      'Run day-to-day IT work across user support, devices, networking, and the operational maintenance that keeps systems from drifting.',
+      'Handle lifecycle, patching, and routine upkeep with an eye toward stability instead of constant firefighting.',
+      'Support Microsoft 365, VOIP, and the tools people depend on to get through the workday without unnecessary friction.',
     ],
   },
   {
-    title: 'Systems and automation',
+    title: 'Automation and application systems',
     items: [
-      'Build Salesforce workflows that cut down manual work without making the process harder to understand.',
-      'Use Flows, Apex, Visualforce, and Lightning Web Components when a plain configuration is not enough.',
-      'Clean up data, reporting, and visibility when systems start getting messy around the edges.',
+      'Design Salesforce workflows that cut down manual work while keeping the process legible and maintainable.',
+      'Use Flows, Apex, Visualforce, and Lightning Web Components when configuration alone stops being enough.',
+      'Clean up data, reporting, and system visibility when the edges start getting messy.',
     ],
   },
   {
-    title: 'Security and resilience',
+    title: 'Resilience and cross-system problem solving',
     items: [
       'Look after backups, monitoring, and general stability for both in-office and remote users.',
-      'Apply security habits that are practical enough to stick, not just good on paper.',
-      'Work through cross-system issues without losing track of the actual business problem underneath them.',
+      'Apply security practices that are practical enough to stick, not just correct in theory.',
+      'Work through cross-system issues without losing sight of the business problem underneath them.',
     ],
   },
 ]
@@ -32,11 +32,10 @@ function Experience() {
     <section id="experience" className="section experience reveal-on-scroll">
       <div className="section__header">
         <p className="section__eyebrow">Experience</p>
-        <h2>The kind of work I end up doing most often</h2>
+        <h2>What I work on</h2>
         <p>
-          A lot of my work comes down to keeping systems reliable, untangling
-          process problems, and building something more maintainable than what
-          was there before.
+          The throughline is usually the same: make the system clearer, more
+          dependable, and easier to run than it was before.
         </p>
       </div>
 

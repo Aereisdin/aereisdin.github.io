@@ -3,20 +3,20 @@ import './Header.css'
 
 const terminalLines = [
   {
-    command: 'check-infrastructure',
-    note: 'Making sure the important stuff is stable before anything clever happens.',
+    command: 'map-system-friction',
+    note: 'Find the handoff, bottleneck, or workaround that is creating the most drag.',
+  },
+  {
+    command: 'stabilize-the-core',
+    note: 'Reliable foundations matter more than impressive complexity.',
   },
   {
     command: 'untangle-salesforce-flow',
-    note: 'Usually means finding the part everyone has been quietly working around.',
+    note: 'Automation should clarify a process, not bury it under more moving parts.',
   },
   {
-    command: 'write-it-down',
-    note: 'Because solving it once is not enough if nobody can follow it later.',
-  },
-  {
-    command: 'build-the-small-tool',
-    note: 'The kind that saves five minutes a day until it turns into a real win.',
+    command: 'design-the-handoff',
+    note: 'Tooling, documentation, and ownership should make the next step obvious.',
   },
 ]
 
@@ -54,16 +54,22 @@ function Header() {
   return (
     <header className="hero section reveal-on-scroll">
       <div className="hero__content">
-        <p className="section__eyebrow">Kiel Sprague</p>
-        <h1>Kiel Sprague</h1>
+        <p className="section__eyebrow">Systems builder</p>
+        <h1 className="hero__name">Kiel Sprague</h1>
+        <p className="hero__role">
+          Working across software, infrastructure, operations, and the systems
+          that connect them.
+        </p>
         <p className="hero__summary">
-          I work in IT, build systems, and spend a lot of time fixing the kind
-          of problems that slow people down.
+          I build practical systems that make work clearer, steadier, and easier
+          to scale.
         </p>
         <p className="hero__detail">
-          Most of my work lives somewhere between infrastructure, Salesforce,
-          documentation, and internal tools. I like making things clearer,
-          steadier, and easier to maintain than they were before.
+          Most of my work sits at the intersection of Salesforce automation,
+          web tools, Microsoft 365, security, and the operational details that
+          keep an organization moving. I pay attention to how systems connect,
+          where friction shows up, and what needs to be simplified so people can
+          actually rely on it.
         </p>
         <div className="hero__actions">
           <a className="button-link" href="#projects">
@@ -76,16 +82,16 @@ function Header() {
 
         <div className="hero__glance" aria-label="Work at a glance">
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Reliable systems</p>
-            <p>I like keeping the core work stable before layering on anything extra.</p>
+            <p className="hero__glance-label">Systems thinking</p>
+            <p>I start by looking at the whole system, not just the symptom in front of me.</p>
           </article>
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Clear handoffs</p>
-            <p>Good process matters more to me than clever complexity nobody can support.</p>
+            <p className="hero__glance-label">Maintainable fixes</p>
+            <p>The best solution is the one people can still support six months later.</p>
           </article>
           <article className="hero__glance-card">
-            <p className="hero__glance-label">Useful tools</p>
-            <p>The best fixes are usually small, practical, and easy for the next person to follow.</p>
+            <p className="hero__glance-label">Experience matters</p>
+            <p>I care about how systems feel to use, whether the space is digital, operational, or physical.</p>
           </article>
         </div>
       </div>
@@ -123,9 +129,9 @@ function Header() {
         </div>
 
         <ul className="hero__highlights">
-          <li>I keep day-to-day IT work moving.</li>
-          <li>I build Salesforce processes that make sense.</li>
-          <li>I write documentation people can actually use.</li>
+          <li>I build across IT operations, automation, and infrastructure.</li>
+          <li>I simplify processes so they hold up in real use.</li>
+          <li>I care about systems and spaces that feel intentional.</li>
         </ul>
       </div>
     </header>
