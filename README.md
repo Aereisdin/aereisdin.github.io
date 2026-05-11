@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# aereisdin.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Kiel Sprague, built with React, TypeScript, and Vite. The site is deployed to GitHub Pages at:
 
-Currently, two official plugins are available:
+https://aereisdin.github.io
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This project is a static, prerendered portfolio site with multilingual routes:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `/` - English
+- `/es/` - Spanish
+- `/ja/` - Japanese
+- `/de/` - German
 
-## Expanding the ESLint configuration
+The React app is rendered once per supported language during the production build. The prerender step also writes `robots.txt` and `sitemap.xml` into `dist`.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- ESLint
+- GitHub Pages
+- `vite-plugin-svgr` for importing SVG files as React components
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```text
+src/
+  App.tsx                  Main page composition
+  AppRoot.tsx              App wrapper with language provider
+  entry-server.tsx         SSR/prerender entry point
+  siteConfig.ts            Site URL, social links, preview image config
+  i18n/
+    siteCopy.ts            All localized site copy
+    languageRoutes.ts      Language route helpers
+    LanguageContext.tsx    Runtime language provider
+  components/              Page sections and shared UI
+  assets/                  Imported images and SVGs
+
+scripts/
+  prerender.mjs            Writes static language pages and SEO files
+
+public/
+  favicon.svg
+  social-preview.png
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Getting Started
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Install dependencies:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+Start the local dev server:
+
+```bash
+npm run dev
+```
+
+Build the production site:
+
+```bash
+npm run build
+```
+
+Preview the built site locally:
+
+```bash
+npm run preview
+```
+
+Run lint checks:
+
+```bash
+npm run lint
+```
+
+## Build Flow
+
+The production build runs:
+
+1. TypeScript project build with `tsc -b`
+2. Vite client build into `dist`
+3. Vite SSR build into `dist/server`
+4. Static prerender via `scripts/prerender.mjs`
+
+The prerender script imports the server bundle, renders each supported language route, injects language-specific metadata, writes the sitemap and robots file, then removes the temporary server bundle.
+
+## Editing Content
+
+Most site text lives in:
+
+```text
+src/i18n/siteCopy.ts
+```
+
+Shared metadata and external links live in:
+
+```text
+src/siteConfig.ts
+```
+
+When adding a language, update:
+
+- `supportedLanguages` and `siteCopy` in `src/i18n/siteCopy.ts`
+- `localeMap` in `src/entry-server.tsx`
+
+## Deployment
+
+Deployment is handled by GitHub Actions:
+
+```text
+.github/workflows/deploy.yml
+```
+
+On pushes to `main`, the workflow installs dependencies, runs `npm run build`, uploads `dist`, and deploys it through GitHub Pages.
